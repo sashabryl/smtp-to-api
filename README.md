@@ -3,7 +3,7 @@
 ## Installation and running
 
 1. Clone the repository
-2. Create a .env file with the following variables:
+2. Create a .env file according to .env.sample with the following variables:
    - SECRET_KEY: The secret key for the application
    - RESEND_API_KEY: The Resend API key
 3. Run the application using Docker
