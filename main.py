@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 async def forward_email(request: Request):
     email_data = await request.json()
     authentication_header = request.headers.get("Authorization")
-    if authentication_header != SECRET_KEY:
+    if authentication_header.split()[1] != SECRET_KEY:
         return {"status": 401, "message": "Unauthorized"}
   
     response = await requests.post(
